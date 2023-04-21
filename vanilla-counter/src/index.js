@@ -20,19 +20,17 @@ const add = document.getElementById('add');
 const minus = document.getElementById('minus');
 const number = document.querySelector('strong');
 
-//
-
 const onChange = () => {
   number.innerText = countStore.getState();
 };
 
+countStore.subscribe(onChange);
+
 const handleAdd = () => {
   countStore.dispatch({ type: ADD });
-  onChange();
 };
 const handleMinus = () => {
   countStore.dispatch({ type: MINUS });
-  onChange();
 };
 add.addEventListener('click', handleAdd);
 minus.addEventListener('click', handleMinus);

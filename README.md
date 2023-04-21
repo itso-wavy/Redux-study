@@ -20,5 +20,5 @@ store.getState(); // modified state
 - action: data 업데이트 분기점 객체?
 - .dispatch(): reducer에 action 전달
 - .getState(): 업데이트된 state 가져오기
-
-// reducer(currentState = 0, {type: 'ADD'})
+- .subscribe(): state가 변화하면 콜백함수를 실행
+  **never mutate state!**: reducer 는 순수 함수
