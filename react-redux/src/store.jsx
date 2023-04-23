@@ -2,20 +2,6 @@ import { createStore } from 'redux';
 
 const [ADD, DELETE] = ['ADD', 'DELETE'];
 
-const addToDo = text => {
-  return {
-    type: ADD,
-    text,
-  };
-};
-
-const deleteToDo = id => {
-  return {
-    type: DELETE,
-    id,
-  };
-};
-
 const reducer = (state = [], action) => {
   switch (action.type) {
     case ADD:
@@ -30,8 +16,19 @@ const reducer = (state = [], action) => {
 const store = createStore(reducer);
 
 export const actionCreators = {
-  addToDo,
-  deleteToDo,
+  addToDo: text => {
+    return {
+      type: ADD,
+      text,
+    };
+  },
+
+  deleteToDo: id => {
+    return {
+      type: DELETE,
+      id,
+    };
+  },
 };
 
 export default store;

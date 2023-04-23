@@ -1,9 +1,9 @@
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import store from '../store';
 import Home from '../routes/Home';
 import Detail from '../routes/Detail';
-import store from '../store';
 
 function App() {
   return (
